@@ -1,32 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app >
+    <div>
+      <v-app-bar color="teal darken-1"  dark app flat="">
+        <v-toolbar-title><strong>RRHH</strong></v-toolbar-title>
+        <div style=" margin-left: 200px; text-align:center; color:red;" justify-center></div>
+
+        <v-spacer></v-spacer>
+
+
+
+        <p class="font-weight-light mt-4 ml-2"></p>
+      </v-app-bar>
     </div>
-    <router-view/>
-  </div>
+
+    <v-content>
+      <!--Contenido-->
+      <v-container fill-height fluid grid-list-xl style="background-color: #F4F8F9">
+        <v-layout justify-center wrap>
+          <v-flex md12>
+            <router-view :key="$route.fullPath"></router-view>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <!--fin contenido-->
+
+      <!--footer-->
+      <!--fin footer-->
+
+
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: 'App',
+  components: {
+  },
 
-#nav {
-  padding: 30px;
-}
+  data: () => ({
+  }),
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  methods: {
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  }
+};
+</script>
