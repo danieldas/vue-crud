@@ -25,6 +25,12 @@ const routes = [
     name: 'funcionarios',
     component: () => import('../views/funcionarios/index.vue'),
   },
+  {
+    path: '/operaciones',
+    name: 'operaciones',
+    component: () => import('../views/operaciones.vue'),
+  },
+
 ]
 
 const router = new VueRouter({

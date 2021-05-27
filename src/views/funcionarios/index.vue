@@ -2,7 +2,7 @@
   <v-card outlined>
     <!--encabezado-->
     <v-card-title  >
-      <v-list-item style="margin:-15px">
+      <v-list-item >
 
         <v-list-item-content>
           <v-list-item-title class="title">Funcionario</v-list-item-title>
@@ -144,8 +144,7 @@ export default {
     },
   },
   computed: {
-    ...
-        mapState(['url_base'])
+    ...mapState(['url_base'])
   }
 }
 </script>
